@@ -9,13 +9,14 @@ namespace E_players.Models
         {
             //Database / Equipe.csv
             string folder = path.Split("/")[0];
+            string file   = path.Split("/")[1];
 
             if ( !Directory.Exists(folder) )
             {
                 Directory.CreateDirectory(folder);
             }
 
-            if ( File.Exists(path) )
+            if ( !File.Exists(path) )
             {
                 File.Create(path);
             }
