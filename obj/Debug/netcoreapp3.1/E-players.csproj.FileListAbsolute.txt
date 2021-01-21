@@ -36,3 +36,5 @@ C:\Users\Alan\Desktop\C# Aula 1\01 Atividades MVC\E-players\obj\Debug\netcoreapp
 C:\Users\Alan\Desktop\C# Aula 1\01 Atividades MVC\E-players\obj\Debug\netcoreapp3.1\E-players.genruntimeconfig.cache
 C:\Users\Alan\Desktop\C# Aula 1\01 Atividades MVC\E-players\obj\Debug\netcoreapp3.1\E-players.csproj.CopyComplete
 C:\Users\Alan\Desktop\C# Aula 1\01 Atividades MVC\E-players\obj\Debug\netcoreapp3.1\Razor\Views\Equipe\Index.cshtml.g.cs
+C:\Users\Alan\Desktop\C# Aula 1\01 Atividades MVC\E-players\obj\Debug\netcoreapp3.1\Razor\Views\Jogador\Index.cshtml.g.cs
+C:\Users\Alan\Desktop\C# Aula 1\01 Atividades MVC\E-players\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs

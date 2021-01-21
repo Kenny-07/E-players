@@ -5,6 +5,10 @@
     --blue: #00a8dc;
 }
 
+.erro{
+    color: #fc1e8b;
+}
+
 *{
     margin: 0;
     padding: 0;
