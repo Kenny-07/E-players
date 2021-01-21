@@ -10,13 +10,22 @@
 <form method="POST" action='@Url.Action("Cadastrar")' class="cadastro">
 
     <div class="campo">
-        <label>ID</label>
-        <input type="text" name="IdJogador" />
+        <label>Equipe</label>
+        
+        <select name="IdEquipe">
+        <option>Selecione uma opção</option>
+        @foreach (Equipe equipe in ViewBag.equipeLuana)
+        {
+            <option value="@equipe.IdEquipe"> @equipe.Nome</option>
+        }
+    </select>
     </div>
+
+    
 
     <div class="campo">
         <label>ID</label>
-        <input type="text" name="IdEquipe" />
+        <input type="text" name="IdJogador" />
     </div>
 
     <div class="campo">

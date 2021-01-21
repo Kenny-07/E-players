@@ -44,11 +44,11 @@ namespace E_players.Models
                 string[] linha = item.Split(";");
 
                 Jogador jogador = new Jogador();
-                jogador.IdJogador = int.Parse(linha[0]);
-                jogador.Nome = linha[1];
-                jogador.Email = linha[2];
-                jogador.Senha = linha[3];
-                jogador.IdEquipe = int.Parse(linha[4]);
+                jogador.IdJogador    = int.Parse(linha[0]);
+                jogador.Nome         = linha[1];
+                jogador.IdEquipe     = int.Parse(linha[2]);
+                jogador.Email        = linha[3];
+                jogador.Senha        = linha[4];
 
                 jogadores.Add(jogador);
 

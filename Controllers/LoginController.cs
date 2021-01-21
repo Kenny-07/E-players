@@ -3,51 +3,52 @@ using E_players.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace E_players.Controllers
+namespace Eplayers_AspNet_Luaninha.Controllers
 {
+
     [Route("Login")]
+
     public class LoginController : Controller
     {
-        Jogador jogadorModel = new Jogador();
 
         [TempData]
         public string Mensagem { get; set; }
         
+        Jogador jogadorModel = new Jogador();
         public IActionResult Index()
         {
             return View();
         }
 
         [Route("Logar")]
-        public IActionResult Logar(IFormCollection form)
+        public IActionResult Logar(IFormCollection form )
         {
-            List<string> csv = jogadorModel.ReadAllLinesCSV("Database/Jogador.csv");
+           List<string> csv = jogadorModel.ReadAllLinesCSV("Database/Jogador.csv");
 
+    // Verificamos se as informações passadas existe na lista de string
             var logado = 
             csv.Find(
                 x => 
-                x.Split(";")[2] == form["Email"] && 
-                x.Split(";")[3] == form["Senha"]
+                x.Split(";")[3] == form["Email"] && 
+                x.Split(";")[4] == form["Senha"]
             );
 
-            if (logado != null)
+            // Redirecionamos o usuário logado caso encontrado
+            if(logado != null)
             {
-                HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
-
+                HttpContext.Session.SetString("_UserName", logado.Split(";")[2]);
                 return LocalRedirect("~/");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
             return LocalRedirect("~/Login");
-
         }
 
-        [Route("Logout")]
-        public IActionResult Logout()
+        [Route("Lougout")]
+        public IActionResult Sair()
         {
             HttpContext.Session.Remove("_UserName");
             return LocalRedirect("~/");
         }
-
     }
 }
